@@ -15,4 +15,6 @@ For now it:
 
 If you have issues installing OpenCV to get this shit to work that's not my problem.
 
+Also package.json doesn't have all the dependencies in it. Oops.
+
 No warranties, express or implied, yada yada. 
