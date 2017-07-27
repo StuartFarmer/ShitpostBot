@@ -36,11 +36,15 @@ var download = function(uri, filename, callback){
 
 client.on('message', function(message) {
   var match_data = message.content.match(/ayy/i);
+  // If someone says "ayy", say "lmao".
+
+  // The pinnacle of comedy.
   if(match_data) {
     message.channel.sendMessage("lmao");
     return;
   }
 
+  // All of this crap happens if someone posts an image URL.
   var url_regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
   match_data = message.content.match(url_regex);
   if(match_data) {
@@ -72,6 +76,7 @@ client.on('message', function(message) {
     return;
   }
 
+  // This happens if someone directly attaches image(s)
   if(message.attachments.size > 0) {
     var images = message.attachments.forEach(function(attachment) {
       if(attachment.width && attachment.height && !message.author.bot) {
