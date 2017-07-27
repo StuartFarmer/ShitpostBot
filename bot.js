@@ -44,6 +44,31 @@ client.on('message', function(message) {
     return;
   }
 
+  var nut_time = false
+  if(message.content === '!nut') {
+    nut_time = true
+  }
+
+  if(nut_time) {
+    message.channel.sendMessage('```NNNNNNNN        NNNNNNNNUUUUUUUU     UUUUUUUUTTTTTTTTTTTTTTTTTTTTTTT\n'+
+'N:::::::N       N::::::NU::::::U     U::::::UT:::::::::::::::::::::T\n'+
+'N::::::::N      N::::::NU::::::U     U::::::UT:::::::::::::::::::::T\n'+
+'N:::::::::N     N::::::NUU:::::U     U:::::UUT:::::TT:::::::TT:::::T\n'+
+'N::::::::::N    N::::::N U:::::U     U:::::U TTTTTT  T:::::T  TTTTTT\n'+
+'N:::::::::::N   N::::::N U:::::D     D:::::U         T:::::T        \n'+
+'N:::::::N::::N  N::::::N U:::::D     D:::::U         T:::::T        \n'+
+'N::::::N N::::N N::::::N U:::::D     D:::::U         T:::::T        \n'+
+'N::::::N  N::::N:::::::N U:::::D     D:::::U         T:::::T        \n'+
+'N::::::N   N:::::::::::N U:::::D     D:::::U         T:::::T        \n'+
+'N::::::N    N::::::::::N U:::::D     D:::::U         T:::::T        \n'+
+'N::::::N     N:::::::::N U::::::U   U::::::U         T:::::T        \n'+
+'N::::::N      N::::::::N U:::::::UUU:::::::U       TT:::::::TT      \n'+
+'N::::::N       N:::::::N  UU:::::::::::::UU        T:::::::::T      \n'+
+'N::::::N        N::::::N    UU:::::::::UU          T:::::::::T      \n'+
+'NNNNNNNN         NNNNNNN      UUUUUUUUU            TTTTTTTTTTT ```');
+    return;
+  }
+
   // All of this crap happens if someone posts an image URL.
   var url_regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
   match_data = message.content.match(url_regex);
