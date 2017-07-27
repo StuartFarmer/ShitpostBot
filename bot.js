@@ -6,6 +6,8 @@ const Faced = require('faced');
 var faced = new Faced();
 const Jimp = require('jimp');
 
+const copypasta = require('./copypasta.js')
+
 client.on('ready', function() {
   console.log('Bot ready.');
 });
@@ -41,6 +43,16 @@ client.on('message', function(message) {
   // The pinnacle of comedy.
   if(match_data) {
     message.channel.sendMessage("lmao");
+    return;
+  }
+
+  var nut_time = false
+  if(message.content === '!nut') {
+    nut_time = true
+  }
+
+  if(nut_time) {
+    message.channel.sendMessage(copypasta.nut);
     return;
   }
 
