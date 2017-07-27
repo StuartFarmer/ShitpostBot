@@ -10,8 +10,10 @@ For now it:
 
 ## Usage
 
-1. Put your discord API key into a file called `API_KEY`
-2. Run bot.js
+1. 	Put your discord API key into a file called `API_KEY`
+2. 	Make sure there's a directory called `images/` in the same place
+ 	as the bot script
+2. 	Run bot.js
 
 If you have issues installing OpenCV to get this shit to work that's not my problem.
 
