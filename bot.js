@@ -52,6 +52,12 @@ client.on('message', function(message) {
     return;
   }
 
+  match_data = message.content.match(/!roasted/i);
+  if(match_data) {
+    message.channel.sendMessage("https://www.youtube.com/watch?v=_tWC5qtfby4");
+    return;
+  }
+
   // All of this crap happens if someone posts an image URL.
   var url_regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
   match_data = message.content.match(url_regex);
