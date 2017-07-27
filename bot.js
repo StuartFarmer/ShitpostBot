@@ -46,12 +46,8 @@ client.on('message', function(message) {
     return;
   }
 
-  var nut_time = false
-  if(message.content === '!nut') {
-    nut_time = true
-  }
-
-  if(nut_time) {
+  match_data = message.content.match(/!nut/i);
+  if(match_data) {
     message.channel.sendMessage(copypasta.nut);
     return;
   }
